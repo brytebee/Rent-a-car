@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+namespace :api, defaults: {format: :json} do
+  namespace :v1 do
+    resources :users, only: %i[index create]
+   
+  end
+end
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+post 'api/v1/auth/login' , to: 'api/v1/authentication#login'
+
+
 end
