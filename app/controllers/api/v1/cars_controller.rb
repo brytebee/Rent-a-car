@@ -1,5 +1,6 @@
 class Api::V1::CarsController < ApplicationController
   before_action :set_car, only: %i[show update destroy]
+  before_action :authorize_request, except: %i[index show]
 
   # GET /cars
   def index
