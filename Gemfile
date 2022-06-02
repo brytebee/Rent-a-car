@@ -46,7 +46,6 @@ group :development do
   # gem "spring"
 end
 
-
 gem 'jwt'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
