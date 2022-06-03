@@ -3,6 +3,7 @@ namespace :api, defaults: {format: :json} do
   namespace :v1 do
     resources :users, only: %i[index create]
     resources :cars
+    resources :reservations, only: %i[index create destroy]
   end
 end
 
