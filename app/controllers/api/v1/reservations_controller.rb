@@ -2,12 +2,12 @@ class Api::V1::ReservationsController < ApplicationController
   before_action :set_reservation, only: :destroy
 
   def index
-    @reservations = current_user.reservations
-    render json: @reservations, status: 200
+    @reservations = Reservation.all
+    render json: @reservations
   end
 
   def create
-    @reservation = current_user.reservations.new(reservation_params)
+    @reservation = Reservation.new(reservation_params)
 
     if @reservation.save
       render :create, status: :created
