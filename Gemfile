@@ -45,3 +45,12 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
+# Use Json Web Token (JWT) for token based authentication
+gem 'jwt'
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'rack-cors'
+
+gem 'rubocop', '>= 1.0', '< 2.0'
