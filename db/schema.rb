@@ -34,8 +34,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_100107) do
   create_table "reservations", force: :cascade do |t|
     t.date "pick_up_date"
     t.date "drop_off_date"
-    t.date "pick_up_city"
-    t.date "return_city"
+    t.string "pick_up_city"
+    t.string "return_city"
     t.bigint "user_id", null: false
     t.bigint "car_id", null: false
     t.datetime "created_at", null: false
