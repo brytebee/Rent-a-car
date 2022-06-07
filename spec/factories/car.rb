@@ -7,7 +7,7 @@ FactoryBot.define do
 		seat { 4 }
 		year { 2019 }
 		engine { 'automatic' }
-		aircon { 'false' }
+		aircon { false }
 		price { '18.00' }
 		description { 'some' }
 		user

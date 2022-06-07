@@ -4,7 +4,7 @@ RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
     before (:each) do
 			@user = create(:user)
-      @car = create(:car, user: @user)
+      @car = create(:car, aircon: true, user: @user)
       get '/api/v1/cars'
     end
     

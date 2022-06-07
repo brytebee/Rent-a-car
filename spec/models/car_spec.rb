@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Car, type: :model do
   before(:each) do
     @user = create(:user)
-    @car = create(:car, user: @user)
+    @car = create(:car, aircon: true, user: @user)
   end
 
   it 'if is valid' do
@@ -47,7 +47,8 @@ RSpec.describe Car, type: :model do
 
   it 'if is blank color' do
     @car.color = nil
-    expect(@car).to be_valid
+    #expect(@car).to be_valid
+    expect(@car).to_not be_valid
   end
 
   it 'if there is color' do
@@ -71,7 +72,7 @@ RSpec.describe Car, type: :model do
   end
 
   it 'check aircon is present & to be false' do
-    @car.aircon = 'false'
+    #@car.aircon = 'false'
     expect(@car).to be_valid
   end
 

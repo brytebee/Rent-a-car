@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Reservation, type: :model do
   before(:each) do
     @user = create(:user)
-    @car = create(:car)
+    @car = create(:car, aircon: true, user: @user)
     @reservation = create(:reservation, user: @user, car: @car)
   end
 
