@@ -87,7 +87,8 @@ RSpec.describe Car, type: :model do
   end
 
   it 'check is instance' do
-    @car = Car.new(user: @user, model: 'Ford', make: 'Some', image: 'photo.jpg', color: 'red', seat: 4, year: 2019, engine: 'automatic', aircon: 'false', price: '18.00', description: 'some')
+    @car = Car.new(user: @user, model: 'Ford', make: 'Some', image: 'photo.jpg', color: 'red', seat: 4, year: 2019,
+                   engine: 'automatic', aircon: 'false', price: '18.00', description: 'some')
     expect(@car).to be_an_instance_of(Car)
   end
 

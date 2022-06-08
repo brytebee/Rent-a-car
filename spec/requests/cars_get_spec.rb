@@ -1,16 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe 'Cars', type: :request do
-    let!(:user) { create(:user) }
-    let!(:new_token) { JsonWebToken.encode(user_id: user.id) }
-    let!(:car) { create(:car, aircon: true, user: user) }
-    let!(:token) do
-      { "Authorization" => "Bearer #{new_token}" }
+  let!(:user) { create(:user) }
+  let!(:new_token) { JsonWebToken.encode(user_id: user.id) }
+  let!(:car) { create(:car, aircon: true, user:) }
+  let!(:token) do
+    { 'Authorization' => "Bearer #{new_token}" }
+  end
+  describe 'GET /index' do
+    before(:each) do
+      get '/api/v1/cars'
     end
-    describe 'GET /index' do
-        before(:each) do
-          get '/api/v1/cars'
-        end
 
     it 'returns all cars' do
       expect(json_response).not_to be_empty
@@ -48,5 +48,4 @@ RSpec.describe 'Cars', type: :request do
       end
     end
   end
-
 end
