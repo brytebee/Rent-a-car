@@ -11,7 +11,7 @@ class Api::V1::UsersController < ApplicationController
 
     if @user.save
       token = JsonWebToken.encode(user_id: @user.id)
-      render json: token, status: :created
+      render json: {username: @user.username, token: token}, status: :created
     else
       render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
     end
@@ -20,6 +20,6 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:name, :username, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :username, :email, :password, :password_confirmation)
   end
 end
