@@ -1,6 +1,12 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/v1/cars', type: :request do
+  let!(:user) { create(:user) }
+  let!(:new_token) { JsonWebToken.encode(user_id: user.id) }
+  let(:Authorization) { "Bearer #{new_token}" }
+  let!(:car) { create(:car, aircon: true, user:) }
+  let(:id) { car.id }
+
   path '/api/v1/cars' do
     get('list cars') do
       response(200, 'successful') do
@@ -16,7 +22,31 @@ RSpec.describe 'api/v1/cars', type: :request do
     end
 
     post('create car') do
-      response(200, 'successful') do
+      tags 'Cars'
+      consumes 'application/json', 'application/xml'
+      security [Bearer: {}]
+      parameter name: :Authorization, in: :header, type: :string
+
+      parameter name: :car, in: :body, schema: {
+        type: :object,
+        properties: {
+          make: { type: :string },
+          model: { type: :string },
+          image: { type: :string },
+          color: { type: :string },
+          year: { type: :integer },
+          engine: { type: :string },
+          seat: { type: :integer },
+          aircon: { type: :boolean },
+          price: { type: :money },
+          user_id: { type: :bigint },
+          description: { type: :text }
+
+        },
+        required: %w[make model image color year engine seat aircon price user_id description]
+      }
+
+      response(201, 'successful') do
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -30,12 +60,29 @@ RSpec.describe 'api/v1/cars', type: :request do
   end
 
   path '/api/v1/cars/{id}' do
-    # You'll want to customize the parameter types...
-    parameter name: 'id', in: :path, type: :string, description: 'id'
+    parameter name: :id, in: :path, type: :string, description: 'id'
 
     get('show car') do
+      tags 'Cars'
+      consumes 'application/json', 'application/xml'
+
       response(200, 'successful') do
-        let(:id) { 1 }
+        schema type: :object,
+               properties: {
+                 make: { type: :string },
+                 model: { type: :string },
+                 image: { type: :string },
+                 color: { type: :string },
+                 year: { type: :integer },
+                 engine: { type: :string },
+                 seat: { type: :integer },
+                 aircon: { type: :boolean },
+                 price: { type: :money },
+                 user_id: { type: :bigint },
+                 description: { type: :text }
+
+               },
+               required: %w[make model image color year engine seat aircon price user_id description]
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -49,9 +96,47 @@ RSpec.describe 'api/v1/cars', type: :request do
     end
 
     patch('update car') do
-      response(200, 'successful') do
-        let(:id) { '123' }
+      tags 'Cars'
+      consumes 'application/json', 'application/xml'
+      security [Bearer: {}]
+      parameter name: :Authorization, in: :header, type: :string
 
+      parameter name: :car, in: :body, schema: {
+        type: :object,
+        properties: {
+          make: { type: :string },
+          model: { type: :string },
+          image: { type: :string },
+          color: { type: :string },
+          year: { type: :integer },
+          engine: { type: :string },
+          seat: { type: :integer },
+          aircon: { type: :boolean },
+          price: { type: :money },
+          user_id: { type: :bigint },
+          description: { type: :text }
+
+        },
+        required: %w[make model image color year engine seat aircon price user_id description]
+      }
+
+      response(200, 'successful') do
+        schema type: :object,
+               properties: {
+                 make: { type: :string },
+                 model: { type: :string },
+                 image: { type: :string },
+                 color: { type: :string },
+                 year: { type: :integer },
+                 engine: { type: :string },
+                 seat: { type: :integer },
+                 aircon: { type: :boolean },
+                 price: { type: :money },
+                 user_id: { type: :bigint },
+                 description: { type: :text }
+
+               },
+               required: %w[make model image color year engine seat aircon price user_id description]
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -64,8 +149,46 @@ RSpec.describe 'api/v1/cars', type: :request do
     end
 
     put('update car') do
+      tags 'Cars'
+      consumes 'application/json', 'application/xml'
+      security [Bearer: {}]
+      parameter name: :Authorization, in: :header, type: :string
+
+      parameter name: :car, in: :body, schema: {
+        type: :object,
+        properties: {
+          make: { type: :string },
+          model: { type: :string },
+          image: { type: :string },
+          color: { type: :string },
+          year: { type: :integer },
+          engine: { type: :string },
+          seat: { type: :integer },
+          aircon: { type: :boolean },
+          price: { type: :money },
+          user_id: { type: :bigint },
+          description: { type: :text }
+
+        },
+        required: %w[make model image color year engine seat aircon price user_id description]
+      }
       response(200, 'successful') do
-        let(:id) { '123' }
+        schema type: :object,
+               properties: {
+                 make: { type: :string },
+                 model: { type: :string },
+                 image: { type: :string },
+                 color: { type: :string },
+                 year: { type: :integer },
+                 engine: { type: :string },
+                 seat: { type: :integer },
+                 aircon: { type: :boolean },
+                 price: { type: :money },
+                 user_id: { type: :bigint },
+                 description: { type: :text }
+
+               },
+               required: %w[make model image color year engine seat aircon price user_id description]
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -79,9 +202,12 @@ RSpec.describe 'api/v1/cars', type: :request do
     end
 
     delete('delete car') do
-      response(200, 'successful') do
-        let(:id) { '123' }
+      tags 'Cars'
+      consumes 'application/json', 'application/xml'
+      security [Bearer: {}]
+      parameter name: :Authorization, in: :header, type: :string
 
+      response(200, 'successful') do
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

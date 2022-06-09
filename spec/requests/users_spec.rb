@@ -28,7 +28,6 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'POST /api/v1/users' do
-    # let!(:new_user) { create(:user) }
     before do
       @user = attributes_for(:user)
       post '/api/v1/users', params: { user: @user }
