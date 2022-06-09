@@ -21,34 +21,34 @@ RSpec.describe 'api/v1/users', type: :request do
       end
     end
   end
-  # path '/api/v1/users' do
-  #   let!(:user) { { name: 'sam', username: 'dyhfjgfdgjdf', email: 'fdftgdfyd@gmail.com', password: '1234567', password_confirmation: '1234567' } }
+  path '/api/v1/users' do
+    let!(:user) { { user: { name: 'sam', username: 'dyhfjgfdgjdf', email: 'fdftgdfyd@gmail.com', password: '1234567', password_confirmation: '1234567' } } }
 
-  #   post('create user') do
-  #     tags 'Users'
-  #     consumes 'application/json', 'application/xml'
+    post('create user') do
+      tags 'Users'
+      consumes 'application/json', 'application/xml'
 
-  #     parameter name: :user, in: :body, schema: {
-  #       type: :object,
-  #       properties: {
-  #         name: { type: :string },
-  #         username: { type: :string },
-  #         email: { type: :string },
-  #         password: { type: :string },
-  #         password_confirmation: { type: :string }
-  #       },
-  #       required: %w[name username email password password_confirmation]
-  #     }
+      parameter name: :user, in: :body, schema: {
+        type: :object,
+        properties: {
+          name: { type: :string },
+          username: { type: :string },
+          email: { type: :string },
+          password: { type: :string },
+          password_confirmation: { type: :string }
+        },
+        required: %w[name username email password password_confirmation]
+      }
 
-  #     response(201, 'successful') do
-  #       schema type: :object,
-  #              properties: {
-  #                token: { type: :string },
-  #                username: { type: :string }
+      response(201, 'successful') do
+        schema type: :object,
+               properties: {
+                 token: { type: :string },
+                 username: { type: :string }
 
-  #              }
-  #       run_test!
-  #     end
-  #   end
-  # end
+               }
+        run_test!
+      end
+    end
+  end
 end
