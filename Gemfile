@@ -52,12 +52,12 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'rswag'
 
+gem 'rake'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
-    gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main'
-  end
+  gem 'rspec-rails'
 end
 
 group :test do
@@ -65,3 +65,4 @@ group :test do
   gem 'factory_bot_rails'
   
 end
+
