@@ -1,5 +1,6 @@
 class Api::V1::ReservationsController < ApplicationController
   before_action :set_reservation, only: :destroy
+  before_action :authorize_request
 
   def index
     @reservations = Reservation.all
@@ -10,7 +11,8 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
 
     if @reservation.save
-      render :create, status: :created
+      # render :create, status: :created
+      render json: @reservation, status: :created
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end

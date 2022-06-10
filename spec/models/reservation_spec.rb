@@ -2,14 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Reservation, type: :model do
   before(:each) do
-    @user = User.new(id: 4, name: 'Robert', username: 'roby',
-                     email: 'robert@gmail.com', password: 'secret123')
-    @car = Car.create(user: @user, model: 'Ford', make: 'Some',
-                      image: 'photo.jpg', color: 'red', seat: 4,
-                      year: 2019, aircon: 'false', price: '18.00', description: 'some')
-
-    @reservation = Reservation.create(pick_up_date: '2022-05-30', drop_off_date:
-                     '2022-06-05', pick_up_city: 'Paris', return_city: 'Barcelona', car_id: @car.id, user_id: @user.id)
+    @user = create(:user)
+    @car = create(:car, aircon: true, user: @user)
+    @reservation = create(:reservation, user: @user, car: @car)
   end
 
   it 'if is valid' do

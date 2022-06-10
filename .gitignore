@@ -9,6 +9,8 @@
 Gemfile
 Gemfile.lock
 config/database.yml
+
+.vscode
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
