@@ -6,7 +6,7 @@ class Api::V1::AuthenticationController < ApplicationController
     if @user&.authenticate(login_params[:password])
       token = JsonWebToken.encode(user_id: @user.id)
       time = Time.now + 24.hours.to_i
-      render json: { token:, exp: time.strftime('%m-%d-%Y %H:%M'), username: @user.username, role: @user.role }, status: :ok
+      render json: { token:, exp: time.strftime('%m-%d-%Y %H:%M'), user: @user }, status: :ok
     else
       render json: { error: 'unauthorized' }, status: :unauthorized
     end
@@ -15,6 +15,6 @@ class Api::V1::AuthenticationController < ApplicationController
   private
 
   def login_params
-    params.permit(:email, :password)
+    params.require(:user).permit(:email, :password)
   end
 end
