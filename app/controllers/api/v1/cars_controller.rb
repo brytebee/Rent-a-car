@@ -22,7 +22,7 @@ class Api::V1::CarsController < ApplicationController
     if @car.save
       render json: @car, status: :created
     else
-      render json: @car.errors, status: :unprocessable_entity
+      render json: { errors: @car.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
