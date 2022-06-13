@@ -6,6 +6,7 @@ namespace :api, defaults: {format: :json} do
     resources :users, only: %i[index create]
     resources :cars
     resources :reservations, only: %i[index create destroy]
+    resources :current_user, only: %i[index]
   end
 end
 
