@@ -9,7 +9,7 @@ Car.create([
   {
     "make": "Benz",
     "model": "G Wagon",
-    "image": "https://www.motortrend.com/uploads/2022/02/2022-Mercedes-Benz-G-Class-AMG-G63-22.jpg",
+    "image": "https://i.pinimg.com/originals/2a/1d/6f/2a1d6f0fa740a4a7e8e05dccd2b3b98a.png",
     "color": "blue",
     "year": 2010,
     "engine": "Automatic",
@@ -24,8 +24,8 @@ Car.create([
   {
     "make": "Aston Martins",
     "model": "DBS Superleggera",
-    "image": "https://lh5.googleusercontent.com/4Aglc0RGGyMwOVNVbYLEj7QIiIHwersC5_xtkkN5pgHs1N_IjtaQ-jJg52nYOEbfw_e_rtpQfvfQQ1v7VPfTt_H2B0HMBxUofG3WwiuWCr56eu3CsaHxJb81osAMXMvQHQ1CWovQ",
-    "color": "white",
+    "image": "https://amsc-prod-cd.azureedge.net/-/media/aston-martin/images/default-source/models/halo-specs-nov-21/am735_web.png?mw=1920&rev=3646b9c86b8a4cc49acb2dc1e59dfda1&hash=10B15D28FE6AD05B1031F976CA4F1D5C",
+    "color": "#D9BF00",
     "year": 2022,
     "engine": "Automatic",
     "seat": 4,
@@ -39,8 +39,8 @@ Car.create([
   {
     "make": "Polestar",
     "model": "Polestar 1",
-    "image": "https://lh3.googleusercontent.com/XKAH3dx7KCnPVxD4bQY_qM_ptOXuWxah2ZsY3poTEUcFe4LVBi0S7Zo5EELIRi3TEhNj45I2ngV2lG1xjnDq31JYeccKZXi4n_QL6TPs-NZYwdL7G0gZ6NKhRPO6sCPz6BMzIjv3",
-    "color": "white",
+    "image": "https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/7707c436-8efb-48b4-a23f-dbc9220b3274/229ba39c-1358-4804-87b6-b7eb42d68fae.png",
+    "color": "#F2F2F2",
     "year": 2022,
     "engine": "Automatic",
     "seat": 2,
@@ -54,8 +54,8 @@ Car.create([
   {
     "make": "Buggatit",
     "model": "Buggati Chiron",
-    "image": "https://lh4.googleusercontent.com/KCBicm__jeYuozd_VEcGda1Ai8eB3WPYTglrl36ZXLwTZi5a0iZiui8ackkDAB_JKwdOyCbOyr0J7tw47wzotsNFyjFs427yKDbWz-BxD2I6GIZEsd-aBzSspcclSJGzTP578GjE",
-    "color": "white",
+    "image": "https://i.pinimg.com/originals/e9/34/ac/e934ac022c9ecf2dadf6954610176627.png",
+    "color": "#018CF3",
     "year": 2022,
     "engine": "Automatic",
     "seat": 4,
@@ -69,9 +69,9 @@ Car.create([
   {
     "make": "Ford",
     "model": "Ford GT",
-    "image": "https://lh3.googleusercontent.com/u7Kybs6wohqFFmh0ZqX8mGrYEVx0sAsLq5y5_77X_K3k4nR54uKbaRAhBHnByjQclv-47ACNSF_HyV8NmtSysm9Fh6ag1LkDXRXgrs8e1H4tVCeqC7hYtDkVJHlvDS7lOcjerqUS",
-    "color": "gray",
-    "year": 2022,
+    "image": "https://purepng.com/public/uploads/large/purepng.com-ford-gt-blue-carcarvehicletransportford-9615246518465syar.png",
+    "color": "#7BCEFB",
+    "year": 2010,
     "engine": "Automatic",
     "seat": 2,
     "aircon": true,
@@ -84,8 +84,8 @@ Car.create([
   {
     "make": "Porsche",
     "model": "Porsche Taycan",
-    "image": "https://lh4.googleusercontent.com/GEWmM7VjrUzgQjcmadMl95K8LE2R6LtWcO4AVx5SARCbBLW_JrldMVKZxEOqLEaDyxOq8Un-hWW5UtPCrTVr6XoVUJkAk-uRoZplfU_P-Dw_9eSh6bOOzw3OfqnTu3hOttoNEYAd",
-    "color": "white",
+    "image": "https://www.pngmart.com/files/22/Porsche-Taycan-2020-PNG-Transparent.png",
+    "color": "#080807",
     "year": 2022,
     "engine": "Automatic",
     "seat": 4,
@@ -99,8 +99,8 @@ Car.create([
   {
     "make": "Lexus",
     "model": "Lexus LC",
-    "image": "https://lh3.googleusercontent.com/4pYP-LQLAuHoJtByAqaAWvWv_K9bZE4ljCz9Gn3jBOSSBAq9q1YY32TpP_j0c4elSUveTQFtLg0riMzL2WFc-VT8kN83CinUnEtMKjy83lhVgd8pBf2p0Xn1yUWqQ4ylWhKkazIe",
-    "color": "black",
+    "image": "https://www.pngall.com/wp-content/uploads/12/Lexus-PNG-Images-HD.png",
+    "color": "Yellow",
     "year": 2022,
     "engine": "Automatic",
     "seat": 4,
@@ -115,8 +115,8 @@ Car.create([
     
     "make": "Mazda",
     "model": "Mazda 3",
-    "image": "https://lh4.googleusercontent.com/m59p6kVZoQNGirQ2kwjdNQtQk2fEzpiXHUNG4wCeVyLcI288ioaQjpffWPqOp2FBbHYy0yeytp6RgAcZ9TgOiM-kV2c7930dbxbLfIwFcGwqp2h8G_iBE_iu31-h7ZqQXGTdHipl",
-    "color": "black",
+    "image": "https://www.pngkey.com/png/full/340-3405570_sonic-silver-metallic-2018-mazda-3-hatchback-png.png",
+    "color": "#C0C0C2",
     "year": 2022,
     "engine": "Automatic",
     "seat": 4,
@@ -131,8 +131,8 @@ Car.create([
     
     "make": "Audi",
     "model": "Audi RS7 Avant",
-    "image": "https://lh5.googleusercontent.com/NToLEZ9691CU7NUeMDhIQnLrk7-ceiQtHlFaVS9WqfakThXt7qcpqfvr1u1WJB4UoHLpjIEgT0VmFnaYlmz2XcHoW5AqukS9FXAr0pJAQzl6MBiFp2Sojc9KJC7WekSyrPdD5G8k",
-    "color": "black",
+    "image": "https://www.freeiconspng.com/uploads/sport-grey-audi-rs6-avant-car-png-image-5.png",
+    "color": "#C0C0C2",
     "year": 2022,
     "engine": "Automatic",
     "seat": 4,
@@ -147,8 +147,8 @@ Car.create([
     
     "make": "Alfa Romeo",
     "model": "Giulia Quadrifoglio",
-    "image": "https://lh6.googleusercontent.com/os0WFVqqM75BljDKaXepEN2lyC2cxK9vV4YNLWpDWCQfsYG_e1SNRD2gnF-jQz7MjvwQ0RI-vJsgSK2dubY6f3wLAKCcsiXCHZkbcCrrugVkjKfjp7HFDYV3Kmvu7DlJr_oduoav",
-    "color": "red",
+    "image": "https://pngimg.com/uploads/alfa_romeo/alfa_romeo_PNG37.png",
+    "color": "#6F6F6D",
     "year": 2022,
     "engine": "Automatic",
     "seat": 4,
@@ -158,5 +158,87 @@ Car.create([
     "created_at": "2022-06-08T21:50:58.232Z",
     "updated_at": "2022-06-08T21:50:58.232Z",
     "description": "A sharp grill in the form of the Alfa Romeo shield may not be for everyone, but Giulia looks very good with it."
+  },
+  {
+    
+    "make": "Mercedes",
+    "model": "Metallic Benz M-Class",
+    "image": "https://pics.clipartpng.com/midle/Dark_Silver_Metallic_Mercedes_Benz_M_Car_PNG_Clipart-113.png",
+    "color": "#ABA9AD",
+    "year": 2012,
+    "engine": "Automatic",
+    "seat": 5,
+    "aircon": true,
+    "price": "15000.0",
+    "user_id": 1,
+    "created_at": "2022-06-08T21:50:58.232Z",
+    "updated_at": "2022-06-08T21:50:58.232Z",
+    "description": "A sharp grill in the form of the Alfa Romeo shield may not be for everyone, but Giulia looks very good with it."
   }
 ])
+
+User.create(
+  [
+    {
+      "name": "Admin",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123456789$",
+      "password_confirmation": "123456789$",
+      "role": "admin"
+    },
+    {
+      "name": "Testa",
+      "username": "testa",
+      "email": "testa@gmail.com",
+      "password": "1234567",
+      "password_confirmation": "1234567",
+      "role": "user"
+    },
+    {
+      "name": "Testee",
+      "username": "testee",
+      "email": "testee@gmail.com",
+      "password": "123456789",
+      "password_confirmation": "123456789",
+      "role": "user"
+    }
+  ]
+)
+
+Reservation.create(
+  [
+    {
+      "pick_up_date": "2022-09-13",
+      "drop_off_date": "2022-09-14",
+      "pick_up_city": "Hyderabad",
+      "return_city": "secunderabad",
+      "user_id": "1",
+      "car_id": "3"
+    },
+    {
+      "pick_up_date": "2022-09-13",
+      "drop_off_date": "2022-09-14",
+      "pick_up_city": "Hyderabad",
+      "return_city": "secunderabad",
+      "user_id": "3",
+      "car_id": "4"
+    },
+    {
+      "pick_up_date": "2022-09-13",
+      "drop_off_date": "2022-09-14",
+      "pick_up_city": "Hyderabad",
+      "return_city": "secunderabad",
+      "user_id": "2",
+      "car_id": "6"
+    },
+    {
+      "pick_up_date": "2022-09-13",
+      "drop_off_date": "2022-09-14",
+      "pick_up_city": "Hyderabad",
+      "return_city": "secunderabad",
+      "user_id": "3",
+      "car_id": "5"
+    },
+  ]
+)
