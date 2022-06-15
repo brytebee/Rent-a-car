@@ -109,7 +109,7 @@ paths:
       description: id
       required: true
       schema:
-        type: string
+        type: integer
     get:
       summary: show car
       tags:
@@ -478,10 +478,10 @@ paths:
               - password
               - password_confirmation
 servers:
-- url: https://{defaultHost}
+- url: http://{defaultHost}
   variables:
     defaultHost:
-      default: localhost:3000
+      default: localhost:3001
 components:
   securitySchemes:
     JWT:

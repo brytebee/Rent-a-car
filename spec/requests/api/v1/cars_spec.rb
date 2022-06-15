@@ -60,7 +60,7 @@ RSpec.describe 'api/v1/cars', type: :request do
   end
 
   path '/api/v1/cars/{id}' do
-    parameter name: :id, in: :path, type: :string, description: 'id'
+    parameter name: :id, in: :path, type: :integer, description: 'id'
 
     get('show car') do
       tags 'Cars'
