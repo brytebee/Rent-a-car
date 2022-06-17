@@ -37,6 +37,23 @@ Internet connection and basic computing skills.
 2. On the cmd run `cd Rent-a-car`
 3. Run `rspec` or `rspec spec/models`
 
+## Kanban Borad Info
+
+[Link to kanban board](https://github.com/brytebee/Rent-a-car/issues/15)
+
+
+We are a team of 5 members.
+- Team member #1 - @netman5 
+- Team member #2 - @brytebee 
+- Team member #3 - @AkshithaReddy1899 
+- Team member #4 - @mugishasam123 
+
+Snapshots
+
+![image](https://user-images.githubusercontent.com/27709832/171392431-42f1f274-472d-416c-b55a-08a7cf8fafa1.png)
+
+![image](https://user-images.githubusercontent.com/27709832/171391950-77991add-5b7f-4b18-93d3-41bfe23a046a.png)
+
 ## Author
 
 👤 **Atsighi Bright**
