@@ -5,6 +5,35 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+User.create(
+  [
+    {
+      "name": "Admin",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123456789$",
+      "password_confirmation": "123456789$",
+      "role": "admin"
+    },
+    {
+      "name": "Testa",
+      "username": "testa",
+      "email": "testa@gmail.com",
+      "password": "1234567",
+      "password_confirmation": "1234567",
+      "role": "user"
+    },
+    {
+      "name": "Testee",
+      "username": "testee",
+      "email": "testee@gmail.com",
+      "password": "123456789",
+      "password_confirmation": "123456789",
+      "role": "user"
+    }
+  ]
+)
+
 Car.create([
   {
     "make": "Benz",
@@ -176,35 +205,6 @@ Car.create([
     "description": "A sharp grill in the form of the Alfa Romeo shield may not be for everyone, but Giulia looks very good with it."
   }
 ])
-
-User.create(
-  [
-    {
-      "name": "Admin",
-      "username": "admin",
-      "email": "admin@gmail.com",
-      "password": "123456789$",
-      "password_confirmation": "123456789$",
-      "role": "admin"
-    },
-    {
-      "name": "Testa",
-      "username": "testa",
-      "email": "testa@gmail.com",
-      "password": "1234567",
-      "password_confirmation": "1234567",
-      "role": "user"
-    },
-    {
-      "name": "Testee",
-      "username": "testee",
-      "email": "testee@gmail.com",
-      "password": "123456789",
-      "password_confirmation": "123456789",
-      "role": "user"
-    }
-  ]
-)
 
 Reservation.create(
   [
