@@ -10,6 +10,8 @@ It is built as a requirement for the Microverse Final Capstone.
 
 [Coming soon!](https://livedemo.com/)
 
+![Frontend Image](public/image.png)
+
 ## Built With
 
 - Rails
