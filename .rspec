@@ -1,0 +1,5 @@
+--require spec_helper
+
+group :development, :test do
+  gem 'factory_bot_rails'
+end

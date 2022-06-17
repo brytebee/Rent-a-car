@@ -1,0 +1,491 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/cars":
+    get:
+      summary: list cars
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create car
+      tags:
+      - Cars
+      security:
+      - Bearer: {}
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '201':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                make:
+                  type: string
+                model:
+                  type: string
+                image:
+                  type: string
+                color:
+                  type: string
+                year:
+                  type: integer
+                engine:
+                  type: string
+                seat:
+                  type: integer
+                aircon:
+                  type: boolean
+                price:
+                  type: money
+                user_id:
+                  type: bigint
+                description:
+                  type: text
+              required:
+              - make
+              - model
+              - image
+              - color
+              - year
+              - engine
+              - seat
+              - aircon
+              - price
+              - user_id
+              - description
+          application/xml:
+            schema:
+              type: object
+              properties:
+                make:
+                  type: string
+                model:
+                  type: string
+                image:
+                  type: string
+                color:
+                  type: string
+                year:
+                  type: integer
+                engine:
+                  type: string
+                seat:
+                  type: integer
+                aircon:
+                  type: boolean
+                price:
+                  type: money
+                user_id:
+                  type: bigint
+                description:
+                  type: text
+              required:
+              - make
+              - model
+              - image
+              - color
+              - year
+              - engine
+              - seat
+              - aircon
+              - price
+              - user_id
+              - description
+  "/api/v1/cars/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: show car
+      tags:
+      - Cars
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update car
+      tags:
+      - Cars
+      security:
+      - Bearer: {}
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                make:
+                  type: string
+                model:
+                  type: string
+                image:
+                  type: string
+                color:
+                  type: string
+                year:
+                  type: integer
+                engine:
+                  type: string
+                seat:
+                  type: integer
+                aircon:
+                  type: boolean
+                price:
+                  type: money
+                user_id:
+                  type: bigint
+                description:
+                  type: text
+              required:
+              - make
+              - model
+              - image
+              - color
+              - year
+              - engine
+              - seat
+              - aircon
+              - price
+              - user_id
+              - description
+          application/xml:
+            schema:
+              type: object
+              properties:
+                make:
+                  type: string
+                model:
+                  type: string
+                image:
+                  type: string
+                color:
+                  type: string
+                year:
+                  type: integer
+                engine:
+                  type: string
+                seat:
+                  type: integer
+                aircon:
+                  type: boolean
+                price:
+                  type: money
+                user_id:
+                  type: bigint
+                description:
+                  type: text
+              required:
+              - make
+              - model
+              - image
+              - color
+              - year
+              - engine
+              - seat
+              - aircon
+              - price
+              - user_id
+              - description
+    put:
+      summary: update car
+      tags:
+      - Cars
+      security:
+      - Bearer: {}
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                make:
+                  type: string
+                model:
+                  type: string
+                image:
+                  type: string
+                color:
+                  type: string
+                year:
+                  type: integer
+                engine:
+                  type: string
+                seat:
+                  type: integer
+                aircon:
+                  type: boolean
+                price:
+                  type: money
+                user_id:
+                  type: bigint
+                description:
+                  type: text
+              required:
+              - make
+              - model
+              - image
+              - color
+              - year
+              - engine
+              - seat
+              - aircon
+              - price
+              - user_id
+              - description
+          application/xml:
+            schema:
+              type: object
+              properties:
+                make:
+                  type: string
+                model:
+                  type: string
+                image:
+                  type: string
+                color:
+                  type: string
+                year:
+                  type: integer
+                engine:
+                  type: string
+                seat:
+                  type: integer
+                aircon:
+                  type: boolean
+                price:
+                  type: money
+                user_id:
+                  type: bigint
+                description:
+                  type: text
+              required:
+              - make
+              - model
+              - image
+              - color
+              - year
+              - engine
+              - seat
+              - aircon
+              - price
+              - user_id
+              - description
+    delete:
+      summary: delete car
+      tags:
+      - Cars
+      security:
+      - Bearer: {}
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+  "/api/v1/reservations":
+    get:
+      summary: list reservations
+      tags:
+      - Reservations
+      security:
+      - Bearer: {}
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create reservation
+      tags:
+      - Reservations
+      security:
+      - Bearer: {}
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '201':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pick_up_date:
+                  type: date
+                drop_off_date:
+                  type: date
+                pick_up_city:
+                  type: string
+                return_city:
+                  type: string
+                user_id:
+                  type: bigint
+                car_id:
+                  type: bigint
+              required:
+              - pick_up_date
+              - drop_off_date
+              - pick_up_city
+              - return_city
+              - user_id
+              - car_id
+          application/xml:
+            schema:
+              type: object
+              properties:
+                pick_up_date:
+                  type: date
+                drop_off_date:
+                  type: date
+                pick_up_city:
+                  type: string
+                return_city:
+                  type: string
+                user_id:
+                  type: bigint
+                car_id:
+                  type: bigint
+              required:
+              - pick_up_date
+              - drop_off_date
+              - pick_up_city
+              - return_city
+              - user_id
+              - car_id
+  "/api/v1/reservations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    delete:
+      summary: delete reservation
+      tags:
+      - Reservations
+      security:
+      - Bearer: {}
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+  "/api/v1/users":
+    get:
+      summary: list users
+      security:
+      - Bearer: {}
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create user
+      tags:
+      - Users
+      parameters: []
+      responses:
+        '201':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                username:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+                password_confirmation:
+                  type: string
+              required:
+              - name
+              - username
+              - email
+              - password
+              - password_confirmation
+          application/xml:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                username:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+                password_confirmation:
+                  type: string
+              required:
+              - name
+              - username
+              - email
+              - password
+              - password_confirmation
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3001
+components:
+  securitySchemes:
+    JWT:
+      description: the jwt for API auth
+      type: apiKey
+      name: Authorization
+      in: header
