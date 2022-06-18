@@ -10,7 +10,7 @@ It is built as a requirement for the Microverse Final Capstone.
 
 [Coming soon!](https://livedemo.com/)
 
-![Frontend Image](public/image.png)
+![Frontend Image](public/assets/images/image.png)
 
 ## Built With
 
@@ -37,7 +37,7 @@ Internet connection and basic computing skills.
 2. On the cmd run `cd Rent-a-car`
 3. Run `rspec` or `rspec spec/models`
 
-## Author
+## Authors
 
 👤 **Atsighi Bright**
 
